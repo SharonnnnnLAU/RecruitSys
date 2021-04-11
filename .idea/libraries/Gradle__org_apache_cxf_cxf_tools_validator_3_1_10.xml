@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.cxf:cxf-tools-validator:3.1.10">
+    <CLASSES>
+      <root url="jar://E:/gradlelib/caches/modules-2/files-2.1/org.apache.cxf/cxf-tools-validator/3.1.10/e5260c390527590cb4cff868c4af4cd00e61bbe6/cxf-tools-validator-3.1.10.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://E:/gradlelib/caches/modules-2/files-2.1/org.apache.cxf/cxf-tools-validator/3.1.10/34dc49308c7b61ed7b0a83be6b9233153597d08a/cxf-tools-validator-3.1.10-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

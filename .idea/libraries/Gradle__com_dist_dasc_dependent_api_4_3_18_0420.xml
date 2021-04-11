@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.dist:dasc.dependent-api:4.3.18.0420">
+    <CLASSES>
+      <root url="jar://E:/.gradle/caches/modules-2/files-2.1/com.dist/dasc.dependent-api/4.3.18.0420/41ca2fb8329bdc93a68173b88aafcae4a9d6fbc5/dasc.dependent-api-4.3.18.0420.jar!/" />
+      <root url="jar://E:/gradlelib/caches/modules-2/files-2.1/com.dist/dasc.dependent-api/4.3.18.0420/41ca2fb8329bdc93a68173b88aafcae4a9d6fbc5/dasc.dependent-api-4.3.18.0420.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://E:/.gradle/caches/modules-2/files-2.1/com.dist/dasc.dependent-api/4.3.18.0420/5c597759454346dc31be20df699c5f398c8b6676/dasc.dependent-api-4.3.18.0420-sources.jar!/" />
+      <root url="jar://E:/gradlelib/caches/modules-2/files-2.1/com.dist/dasc.dependent-api/4.3.18.0420/5c597759454346dc31be20df699c5f398c8b6676/dasc.dependent-api-4.3.18.0420-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

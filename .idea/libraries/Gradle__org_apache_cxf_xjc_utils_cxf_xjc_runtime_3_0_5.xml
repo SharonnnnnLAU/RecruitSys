@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.cxf.xjc-utils:cxf-xjc-runtime:3.0.5">
+    <CLASSES>
+      <root url="jar://E:/gradlelib/caches/modules-2/files-2.1/org.apache.cxf.xjc-utils/cxf-xjc-runtime/3.0.5/2c283a9363ea7e0ff99e70e9a0cbcb0f37aadaa3/cxf-xjc-runtime-3.0.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://E:/gradlelib/caches/modules-2/files-2.1/org.apache.cxf.xjc-utils/cxf-xjc-runtime/3.0.5/80ae47c358656f5d7c2fd5e3fdf703f37759726c/cxf-xjc-runtime-3.0.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

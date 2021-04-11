@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.cxf:cxf-rt-bindings-corba:3.1.10">
+    <CLASSES>
+      <root url="jar://E:/gradlelib/caches/modules-2/files-2.1/org.apache.cxf/cxf-rt-bindings-corba/3.1.10/614611586b91d4bafc85df9e32588660bf688779/cxf-rt-bindings-corba-3.1.10.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://E:/gradlelib/caches/modules-2/files-2.1/org.apache.cxf/cxf-rt-bindings-corba/3.1.10/ab8818eb46c2df6881089c1f5aae23c2aeb14793/cxf-rt-bindings-corba-3.1.10-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

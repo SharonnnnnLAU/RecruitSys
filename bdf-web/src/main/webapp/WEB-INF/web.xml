@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.5" metadata-complete="false"
+         xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"  >
+
+    <display-name>Approve</display-name>
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+
+    <!--字符编码过滤器-->
+    <filter>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!--防脚本注入过滤-->
+    <filter>
+        <filter-name>HtmlConvertFilter</filter-name>
+        <filter-class>com.dist.bdf.base.interceptor.HtmlConvertFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>HtmlConvertFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+    </filter-mapping>
+
+    <!--防盗链过滤-->
+    <filter>
+        <filter-name>RefererFilter</filter-name>
+        <filter-class>com.dist.bdf.base.filters.RefererFilter</filter-class>
+        <init-param>
+            <param-name>allowServer</param-name>
+            <param-value>baidu.com,</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>RefererFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+    </filter-mapping>
+
+    <!-- 跨域问题解决 -->
+    <!--<filter>-->
+        <!--<filter-name>header</filter-name>-->
+        <!--<filter-class>com.dist.training.bdf.filter.HeaderFilter</filter-class>-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+        <!--<filter-name>header</filter-name>-->
+        <!--<url-pattern>/*</url-pattern>-->
+    <!--</filter-mapping>-->
+
+    <!-- ======================== 单点登录开始 ======================== -->
+
+    <!-- ======================== 单点登录结束 ======================== -->
+
+
+    <!-- ======================== Spring开始 ======================== -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/WEB-INF/classes/spring/spring.xml</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>spring</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>/WEB-INF/classes/spring/spring-mvc.xml</param-value>
+        </init-param>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>spring</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+    <!-- ======================== Spring结束 ======================== -->
+
+
+    <!-- ======================== 跨域设置开始 ============================-->
+    <!--前后端分开部署情况下存在跨域访问的问题，如果前后端部署在一个域下则注释掉下面的配置-->
+    <filter>
+        <filter-name>CORS</filter-name>
+        <filter-class>com.thetransactioncompany.cors.CORSFilter</filter-class>
+        <init-param>
+            <param-name>cors.allowOrigin</param-name>
+            <param-value>*</param-value>
+        </init-param>
+        <init-param>
+            <param-name>cors.supportedMethods</param-name>
+            <param-value>GET, POST, HEAD, PUT, DELETE</param-value>
+        </init-param>
+        <init-param>
+            <param-name>cors.supportedHeaders</param-name>
+            <param-value>Accept, Origin, X-Requested-With, Content-Type, Last-Modified</param-value>
+        </init-param>
+        <init-param>
+            <param-name>cors.exposedHeaders</param-name>
+            <param-value>Set-Cookie</param-value>
+        </init-param>
+        <init-param>
+            <param-name>cors.supportsCredentials</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>CORS</filter-name>
+        <url-pattern>/dcc/*</url-pattern>
+        <url-pattern>/dap/*</url-pattern>
+        <url-pattern>/pcc/*</url-pattern>
+        <url-pattern>/pdt/*</url-pattern>
+        <url-pattern>/auth/*</url-pattern>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <!-- ======================== 跨域设置结束 ============================-->
+
+
+    <!-- ======================== CAS设置开始 ============================-->
+    <!--<listener>-->
+        <!--<listener-class>org.jasig.cas.client.session.SingleSignOutHttpSessionListener</listener-class>-->
+    <!--</listener>-->
+
+    <!--<filter>-->
+        <!--<filter-name>CAS Single Sign Out Filter</filter-name>-->
+        <!--<filter-class>org.jasig.cas.client.session.SingleSignOutFilter</filter-class>-->
+        <!--<init-param>-->
+            <!--<param-name>casServerUrlPrefix</param-name>-->
+            <!--<param-value>http://127.0.0.1:9090/cas-server</param-value>-->
+        <!--</init-param>-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+        <!--<filter-name>CAS Single Sign Out Filter</filter-name>-->
+        <!--<url-pattern>*</url-pattern>-->
+    <!--</filter-mapping>-->
+
+    <!--<filter>-->
+        <!--<filter-name>CAS Validation Filter</filter-name>-->
+        <!--<filter-class>org.jasig.cas.client.validation.Cas20ProxyReceivingTicketValidationFilter</filter-class>-->
+        <!--<init-param>-->
+            <!--<param-name>casServerUrlPrefix</param-name>-->
+            <!--<param-value>http://127.0.0.1:9090/cas-server</param-value>-->
+        <!--</init-param>-->
+        <!--<init-param>-->
+            <!--<param-name>serverName</param-name>-->
+            <!--<param-value>http://127.0.0.1:8080/</param-value>-->
+        <!--</init-param>-->
+        <!--<init-param>-->
+            <!--<param-name>useSession</param-name>-->
+            <!--<param-value>true</param-value>-->
+        <!--</init-param>-->
+        <!--<init-param>-->
+            <!--<param-name>redirectAfterValidation</param-name>-->
+            <!--<param-value>true</param-value>-->
+        <!--</init-param>-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+        <!--<filter-name>CAS Validation Filter</filter-name>-->
+        <!--<url-pattern>*</url-pattern>-->
+    <!--</filter-mapping>-->
+
+    <!--<filter>-->
+        <!--<filter-name>CAS Filter</filter-name>-->
+        <!--<filter-class>org.jasig.cas.client.authentication.AuthenticationFilter</filter-class>-->
+        <!--<init-param>-->
+            <!--<param-name>casServerLoginUrl</param-name>-->
+            <!--<param-value>http://127.0.0.1:9090/cas-server/login</param-value>-->
+        <!--</init-param>-->
+        <!--<init-param>-->
+            <!--<param-name>serverName</param-name>-->
+            <!--<param-value>http://127.0.0.1:8080/</param-value>-->
+        <!--</init-param>-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+        <!--<filter-name>CAS Filter</filter-name>-->
+        <!--<url-pattern>*</url-pattern>-->
+        <!--&lt;!&ndash;<url-pattern>index.jsp</url-pattern>&ndash;&gt;-->
+    <!--</filter-mapping>-->
+
+    <!--<filter>-->
+        <!--<filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>-->
+        <!--<filter-class>org.jasig.cas.client.util.HttpServletRequestWrapperFilter</filter-class>-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+        <!--<filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>-->
+        <!--<url-pattern>*</url-pattern>-->
+    <!--</filter-mapping>-->
+
+    <!-- ======================== CAS设置结束 ============================-->
+
+</web-app>

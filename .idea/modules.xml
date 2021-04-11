@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DAP4.3_Training.iml" filepath="$PROJECT_DIR$/.idea/modules/DAP4.3_Training.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bdf/DAP4.3_Training.bdf.iml" filepath="$PROJECT_DIR$/.idea/modules/bdf/DAP4.3_Training.bdf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bdf-web/DAP4.3_Training.bdf-web.iml" filepath="$PROJECT_DIR$/.idea/modules/bdf-web/DAP4.3_Training.bdf-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bdf-web/DAP4.3_Training.bdf-web.main.iml" filepath="$PROJECT_DIR$/.idea/modules/bdf-web/DAP4.3_Training.bdf-web.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bdf-web/DAP4.3_Training.bdf-web.test.iml" filepath="$PROJECT_DIR$/.idea/modules/bdf-web/DAP4.3_Training.bdf-web.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bdf/DAP4.3_Training.bdf.main.iml" filepath="$PROJECT_DIR$/.idea/modules/bdf/DAP4.3_Training.bdf.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bdf/DAP4.3_Training.bdf.test.iml" filepath="$PROJECT_DIR$/.idea/modules/bdf/DAP4.3_Training.bdf.test.iml" />
+    </modules>
+  </component>
+</project>

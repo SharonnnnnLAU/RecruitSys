@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.atomikos:atomikos-util:3.7.0">
+    <CLASSES>
+      <root url="jar://E:/gradlelib/caches/modules-2/files-2.1/com.atomikos/atomikos-util/3.7.0/849d1e16d45ea8c552edfbce40ff3f366b54453d/atomikos-util-3.7.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://E:/gradlelib/caches/modules-2/files-2.1/com.atomikos/atomikos-util/3.7.0/c8530d7187a702c858ebbc4cbc605e135fd01250/atomikos-util-3.7.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

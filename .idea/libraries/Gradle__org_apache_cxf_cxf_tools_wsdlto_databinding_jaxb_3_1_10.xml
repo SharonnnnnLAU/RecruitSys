@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.cxf:cxf-tools-wsdlto-databinding-jaxb:3.1.10">
+    <CLASSES>
+      <root url="jar://E:/gradlelib/caches/modules-2/files-2.1/org.apache.cxf/cxf-tools-wsdlto-databinding-jaxb/3.1.10/1bd30a1dd4d52e5a92f4056a88c47234c90e7da6/cxf-tools-wsdlto-databinding-jaxb-3.1.10.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://E:/gradlelib/caches/modules-2/files-2.1/org.apache.cxf/cxf-tools-wsdlto-databinding-jaxb/3.1.10/d130d043b92272cb826cbfd91050f626f7f97d1f/cxf-tools-wsdlto-databinding-jaxb-3.1.10-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

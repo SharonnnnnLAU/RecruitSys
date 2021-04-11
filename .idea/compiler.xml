@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <option name="BUILD_PROCESS_ADDITIONAL_VM_OPTIONS" value="-Xmx512m" />
+    <bytecodeTargetLevel target="1.7">
+      <module name="1_BDF-bdf-web_main" target="1.8" />
+      <module name="1_BDF-bdf-web_test" target="1.8" />
+      <module name="1_BDF-bdf_main" target="1.8" />
+      <module name="1_BDF-bdf_test" target="1.8" />
+      <module name="bdf-web_main" target="1.8" />
+      <module name="bdf-web_test" target="1.8" />
+      <module name="bdf_main" target="1.7" />
+      <module name="bdf_test" target="1.7" />
+      <module name="DAP4.3_Training-bdf-web_main" target="1.7" />
+      <module name="DAP4.3_Training-bdf-web_test" target="1.7" />
+      <module name="DAP4.3_Training-bdf_test" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,77 @@
+group 'com.dist.training'
+group 'com.dist.training'
+version '1.0-SNAPSHOT'
+
+//定义扩展变量
+ext.versions = [
+        spring   : '4.3.8.RELEASE',
+        hibernate: '5.1.5.Final',
+        atomikos : '3.7.0',
+        slf4j    : '1.7.22',
+        junit    : '4.12',
+        cxf      : '3.1.10',
+        jackson  : '1.9.8',
+        dasc     : '2.4.0',
+        dap     : '4.3.18.0420',
+        jdk      : '1.7',
+        dcc      : '2.3.0'
+]
+
+//所有子工程统一配置
+subprojects { subproj ->
+    apply plugin: 'java'
+    apply plugin: 'eclipse'
+    apply plugin: 'maven'
+    apply plugin: 'idea'
+
+    repositories {
+        mavenCentral()
+        maven {
+            //阿里私服
+            url 'http://maven.aliyun.com/nexus/content/groups/public/'
+        }
+        maven {
+            //公司内部私服
+            url 'http://58.246.138.178:22280/nexus/content/groups/public/'
+        }
+    }
+
+    sourceCompatibility = 1.7
+    targetCompatibility = 1.7
+
+    configurations {
+
+        deployerJars
+
+        //所有需要排除的传递依赖包
+        all*.exclude group: 'org.eclipse.jetty.orbit', module: 'javax.servlet'
+        all*.exclude group: 'org.json', module: 'org.json'
+        all*.exclude group: 'xerces', module: 'xerces'
+        all*.exclude group: 'javax.ws.rs', module: 'javax.ws.rs'
+        all*.exclude group: 'org.springframework', module: 'spring-asm'
+        all*.exclude group: 'net.sf.ehcache', module: 'ehcache'
+    }
+
+    //依赖
+    dependencies {
+        runtime "javax.servlet:jstl:1.1.2"
+        testCompile "junit:junit:${versions.junit}"
+    }
+
+    //中文支持，否则编译源码的时候会出错
+    //这个需要根据自己的 java 源码的编码进行调整
+    [compileJava, javadoc, compileTestJava]*.options*.encoding = 'UTF-8'
+
+    eclipseJdt {
+        doLast {
+            def f = file('.settings/org.eclipse.core.resources.prefs')
+            if(!f.exists()){
+                f.write('eclipse.preferences.version=1\n')
+                f.append('encoding/<project>=utf-8')
+            }
+        }
+    }
+
+
+}
+

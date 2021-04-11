@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.cxf:cxf-rt-databinding-aegis:3.1.10">
+    <CLASSES>
+      <root url="jar://E:/gradlelib/caches/modules-2/files-2.1/org.apache.cxf/cxf-rt-databinding-aegis/3.1.10/c80d92aaa7e65b4b086a63cecd73eb19057b279/cxf-rt-databinding-aegis-3.1.10.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://E:/gradlelib/caches/modules-2/files-2.1/org.apache.cxf/cxf-rt-databinding-aegis/3.1.10/33ed7d428831caf6f3ca82c379d5ea1f5eb7f86f/cxf-rt-databinding-aegis-3.1.10-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

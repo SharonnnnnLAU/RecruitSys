@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+    http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-4.3.xsd
+    http://www.springframework.org/schema/mvc
+    http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
+
+	<mvc:annotation-driven conversion-service="conversion-service">
+		<mvc:message-converters register-defaults="true">
+			<bean class="org.springframework.http.converter.StringHttpMessageConverter">
+				<constructor-arg value="UTF-8"/>
+				<property name="writeAcceptCharset" value="false" /><!-- 用于避免响应头过大 -->
+			</bean>
+			<bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+				<property name="prettyPrint" value="true" />
+			</bean>
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+	<bean class="com.dist.bdf.base.config.SwaggerConfig" />
+	<context:component-scan base-package="com.dist.*.controller" />
+	<context:component-scan base-package="com.dist.*.*.controller" />
+
+	<!-- 基于Session的本地化解析器 -->
+	<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
+
+	<!-- 视图 -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+	<mvc:interceptors>
+		<!-- 国际化操作拦截器 如果采用基于（请求/Session/Cookie）则必需配置 -->
+		<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" />
+	</mvc:interceptors>
+
+	<!-- 国际化配置 开始 -->
+	<!-- 基于Cookie的本地化解析器 -->
+	<bean id="localeResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver"/>
+	<!-- 国际化配置 结束 -->
+
+	<!-- 静态资源 -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="10240000000"/>
+	</bean>
+
+	<bean id="conversion-service" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+		<property name="converters">
+			<set>
+				<bean class="com.dist.bdf.util.convert.DateTimeConverter"></bean>
+				<bean class="com.dist.bdf.util.convert.IntegerArrayConverter"></bean>
+				<bean class="com.dist.bdf.util.convert.LongArrayConverter"></bean>
+				<bean class="com.dist.bdf.util.convert.FloatArrayConverter"></bean>
+				<bean class="com.dist.bdf.util.convert.DoubleArrayConverter"></bean>
+				<bean class="com.dist.bdf.util.convert.StringArrayConverter"></bean>
+			</set>
+		</property>
+	</bean>
+	<mvc:default-servlet-handler />
+
+	<!-- API 接口跨域配置 -->
+	<mvc:cors>
+		<mvc:mapping path="/**"
+					 allowed-origins="*"
+					 allowed-methods="POST, GET, OPTIONS, DELETE, PUT"
+					 allowed-headers="Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+					 allow-credentials="true" />
+	</mvc:cors>
+    <bean id="exceptionHandler" class="com.dist.bdf.base.exception.DefaultExceptionHandler" />
+
+    <!--<mvc:interceptors>-->
+        <!--<mvc:interceptor>-->
+            <!--<mvc:mapping path="/**" />-->
+            <!--<mvc:exclude-mapping path="/**" />-->
+            <!--<bean class="com.dist.bdf.config.TestHandle"></bean>-->
+        <!--</mvc:interceptor>-->
+    <!--</mvc:interceptors>-->
+
+
+</beans>

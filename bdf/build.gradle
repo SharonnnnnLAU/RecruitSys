@@ -1,0 +1,16 @@
+import com.sun.org.apache.xalan.internal.xsltc.cmdline.Compile
+
+dependencies {
+    //引用 BDF基础工具包和开发框架
+    compile("com.dist:bdf.util:${versions.dap}",
+            "com.thetransactioncompany:cors-filter:2.5",
+            "com.thetransactioncompany:java-property-utils:1.9.1")
+    compile("com.dist:bdf.base:${versions.dap}"){
+        exclude group: 'com.dist', module: 'dasc.dependent'
+    }
+//    compile()
+
+//    implementation group: 'com.thetransactioncompany', name: 'cors-filter', version: '2.5'
+//    implementation group: 'com.thetransactioncompany', name: ':java-property-utils', version: '1.9.1'
+
+}

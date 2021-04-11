@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root cache="true">
+
+    <properties>
+        <property name="${ds_inst.user}">ds_inst.user</property>
+    </properties>
+
+    <config name="list" dbname="instances">
+        <sql>
+            <![CDATA[
+                    select a.* from APP_PRELANDKEYVALUE a  where a.TYPE :type
+                ]]>
+        </sql>
+        <params>
+            <param name="type" />
+        </params>
+        <properties mergeglobal="true"></properties>
+    </config>
+
+    <config name="listPage" dbname="instances">
+        <sql>
+            <![CDATA[
+                SELECT * FROM (
+                     SELECT t1.*, ROWNUM rn FROM (
+                        SELECT * FROM APP_PRELANDKEYVALUE a
+            ]]>
+        </sql>
+        <params>
+            <param name="endrow" />
+            <param name="startrow" />
+        </params>
+        <ordersql>
+            <order name="ID">a.ID DESC</order>
+            <order name="KEY">a.KEY DESC</order>
+            <order name="FK_PROJECT_ID">a.FK_PROJECT_ID DESC</order>
+            <order name="FK_PRELANDUSE_ID">a.FK_PRELANDUSE_ID DESC</order>
+            <order name="TYPE">a.TYPE DESC</order>
+            <order name="USEPLANFARMAERA">a.USEPLANFARMAERA DESC</order>
+            <order name="VALUE">a.VALUE DESC</order>
+        </ordersql>
+        <endsql>
+            <![CDATA[
+            ) t1
+                     WHERE ROWNUM <= :endrow )
+                WHERE rn >= :startrow
+            ]]>
+        </endsql>
+        <properties mergeglobal="true"></properties>
+    </config>
+
+    <config name="findWithStr" dbname="instances">
+        <sql>
+            SELECT
+            T .*
+            FROM
+            APP_PRELANDKEYVALUE T
+            WHERE
+                "ID" LIKE :str
+            OR "KEY" LIKE :str
+            OR "TYPE" LIKE :str
+            OR FK_PRELANDUSE_ID LIKE :str
+            OR FK_PROJECT_ID LIKE :str
+            OR "VALUE" LIKE :str
+        </sql>
+        <params name="str" />
+    </config>
+</root>

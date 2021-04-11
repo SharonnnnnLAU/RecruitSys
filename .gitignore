@@ -1,0 +1,5 @@
+# Project exclude paths
+/.gradle/
+/bdf/build/
+/bdf/build/classes/java/main/
+/bdf-web/build/

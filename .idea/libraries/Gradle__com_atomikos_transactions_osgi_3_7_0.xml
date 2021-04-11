@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.atomikos:transactions-osgi:3.7.0">
+    <CLASSES>
+      <root url="jar://E:/gradlelib/caches/modules-2/files-2.1/com.atomikos/transactions-osgi/3.7.0/ea75a2c74de6afed206507d4fdf7a133b51f6f39/transactions-osgi-3.7.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://E:/gradlelib/caches/modules-2/files-2.1/com.atomikos/transactions-osgi/3.7.0/1bfeb056b387bcdaa4433e7cfb9d9d2cd56ed303/transactions-osgi-3.7.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

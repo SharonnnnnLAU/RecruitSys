@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.cxf:cxf-tools-corba:3.1.10">
+    <CLASSES>
+      <root url="jar://E:/gradlelib/caches/modules-2/files-2.1/org.apache.cxf/cxf-tools-corba/3.1.10/928efe15af8b2b097f5aa6ba0952d8301ed67ca6/cxf-tools-corba-3.1.10.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://E:/gradlelib/caches/modules-2/files-2.1/org.apache.cxf/cxf-tools-corba/3.1.10/34865d342020e058a27a31b1d336297665747d85/cxf-tools-corba-3.1.10-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

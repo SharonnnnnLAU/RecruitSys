@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Gradle : DAP4.3_Training : bdf-web.war">
+    <output-path>$PROJECT_DIR$/bdf-web/build/libs</output-path>
+    <properties id="gradle-properties">
+      <options external-project-path="$PROJECT_DIR$" />
+    </properties>
+    <root id="archive" name="bdf-web.war">
+      <element id="artifact" artifact-name="Gradle : DAP4.3_Training : bdf-web.war (exploded)" />
+    </root>
+  </artifact>
+</component>

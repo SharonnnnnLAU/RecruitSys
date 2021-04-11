@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.cxf:cxf-rt-management:3.1.10">
+    <CLASSES>
+      <root url="jar://E:/gradlelib/caches/modules-2/files-2.1/org.apache.cxf/cxf-rt-management/3.1.10/3589dc60cef05cb78991916362a91c833029113a/cxf-rt-management-3.1.10.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://E:/gradlelib/caches/modules-2/files-2.1/org.apache.cxf/cxf-rt-management/3.1.10/a096445d35d70b53b84c15aeab5055c4b2b9fa3a/cxf-rt-management-3.1.10-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.cxf:cxf-rt-rs-security-sso-saml:3.1.10">
+    <CLASSES>
+      <root url="jar://E:/gradlelib/caches/modules-2/files-2.1/org.apache.cxf/cxf-rt-rs-security-sso-saml/3.1.10/7a5952ece9cf5122e644fe16eb95817f3843485d/cxf-rt-rs-security-sso-saml-3.1.10.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://E:/gradlelib/caches/modules-2/files-2.1/org.apache.cxf/cxf-rt-rs-security-sso-saml/3.1.10/dd12915a78dc9de149c6faae9407cf7bd1107b7e/cxf-rt-rs-security-sso-saml-3.1.10-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

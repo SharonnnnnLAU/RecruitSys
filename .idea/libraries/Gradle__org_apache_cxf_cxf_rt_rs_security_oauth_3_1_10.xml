@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.cxf:cxf-rt-rs-security-oauth:3.1.10">
+    <CLASSES>
+      <root url="jar://E:/gradlelib/caches/modules-2/files-2.1/org.apache.cxf/cxf-rt-rs-security-oauth/3.1.10/fb6e64f12da5d6a95b3a5d0dc03220772d73e326/cxf-rt-rs-security-oauth-3.1.10.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://E:/gradlelib/caches/modules-2/files-2.1/org.apache.cxf/cxf-rt-rs-security-oauth/3.1.10/a73e0b4c638d28da44d0695b564a51b3e0def14d/cxf-rt-rs-security-oauth-3.1.10-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
